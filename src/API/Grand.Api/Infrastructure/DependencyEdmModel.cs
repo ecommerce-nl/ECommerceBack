@@ -384,6 +384,16 @@ namespace Grand.Api.Infrastructure
             #endregion
         }
 
+        protected void Common(ODataConventionModelBuilder builder)
+        {
+            #region Brand model
+
+            builder.EntitySet<PageDto>("Page");
+            builder.EntityType<PageDto>().Count().Filter().OrderBy().Page();
+
+            #endregion
+        }
+
         public void Register(ODataConventionModelBuilder builder, ApiConfig apiConfig)
         {
             if (apiConfig.SystemModel)
@@ -393,6 +403,7 @@ namespace Grand.Api.Infrastructure
                 RegisterCatalog(builder);
                 RegisterCustomers(builder);
                 RegisterShipping(builder);
+                Common(builder);
             }
         }
 
