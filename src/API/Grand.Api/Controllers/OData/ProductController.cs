@@ -43,7 +43,7 @@ namespace Grand.Api.Controllers.OData
 
         [SwaggerOperation(summary: "Get entities from Product", OperationId = "GetProducts")]
         [HttpGet]
-        [EnableQuery(HandleNullPropagation = HandleNullPropagationOption.False)]
+        [EnableQuery(HandleNullPropagation = HandleNullPropagationOption.False, MaxAnyAllExpressionDepth=5)]
         public async Task<IActionResult> Get()
         {
             if (!await _permissionService.Authorize(PermissionSystemName.Products))
