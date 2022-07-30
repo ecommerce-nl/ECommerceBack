@@ -5,7 +5,7 @@ using Grand.Infrastructure.Mapper;
 
 namespace Grand.Api.Infrastructure.Mapper
 {
-    public class AddressProfile : Profile, IAutoMapperProfile
+	public class AddressProfile : Profile, IAutoMapperProfile
     {
         public AddressProfile()
         {
