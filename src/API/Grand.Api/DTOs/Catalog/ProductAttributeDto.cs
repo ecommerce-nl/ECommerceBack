@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Grand.Api.DTOs.Catalog
 {
-    public partial class ProductAttributeDto : BaseApiEntityModel
+	public partial class ProductAttributeDto : BaseApiEntityModel
     {
         public ProductAttributeDto()
         {
